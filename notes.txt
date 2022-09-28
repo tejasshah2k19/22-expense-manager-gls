@@ -1,0 +1,93 @@
+angular -> ts framework -> spa -> 
+
+ng new expense-manager
+
+routings? yes 
+style ? css
+
+
+how to start your server ?
+ng serve --open 
+ng s --o   
+
+
+http://localhost:4200 
+
+
+index.html 
+
+
+angular is component based framework 
+
+index.html -> root component -> app.component 
+   
+   task : component 
+1)  logic file -- login.component.ts 
+2)  view file ---  login.component.html 
+3)  style ---  login.component.css 
+4)  test file -- login.component.spec.ts 
+
+every component have their own selector -- tag 
+
+userdefine components must be load via app.component.html 
+
+how to generate component? 
+
+ng generate component login 
+ng g c home 
+ng g c dashboard 
+
+ng g c user/home 
+ng g c admin/dashboard 
+
+ng g c prohjectmanager/home
+ng g c developer/home 
+
+
+
+
+
+http://localhost:4200/login 
+-> login page 
+
+http://localhost:4200/signup 
+-> signup page 
+
+we need to create url - routes 
+app-routing.module.ts 
+
+what is use of router-outlet ?
+it will load your views as per your url/routes 
+
+
+
+form -> validation -> logic -> response 
+
+how to read form data ? 
+1) ngModel 
+   we need to formsmodule in app.module.ts 
+   
+-----------------------------
+
+
+how to call nodejs api using angular 
+
+1) make sure your nodejs server is started 
+   http://localhost:9999/   ==> this is my node js url 
+
+2) create services or service class to call nodejs api in angular 
+
+3) in service class we have HttpClient class which help us to 
+   call nodejs api 
+   to use httpClient we have to import HttpModule in 
+   app.module.ts 
+   
+ng g service service/session 
+above command will create sessionService inside session folder 
+we create sessionService to call all the api which we access before login 
+
+call any api from service we will create a function 
+1) your function must have return type as Observalbe<any>
+2) if you have to pass some data to api / node server that you have argument function 
+
+
