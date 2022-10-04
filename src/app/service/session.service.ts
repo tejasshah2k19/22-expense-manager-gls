@@ -16,4 +16,7 @@ export class SessionService {
    return this.httpClient.post("http://localhost:9999/register",user)
   }
 
+  loginApi(user:any):Observable<any>{
+    return this.httpClient.post("http://localhost:9999/login",user)
+  }
 }
