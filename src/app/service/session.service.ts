@@ -19,4 +19,8 @@ export class SessionService {
   loginApi(user:any):Observable<any>{
     return this.httpClient.post("http://localhost:9999/login",user)
   }
+  
+  forgetPasswordApi(user:any):Observable<any>{
+    return this.httpClient.post("http://localhost:9999/forgetpassword",user)
+  }
 }
