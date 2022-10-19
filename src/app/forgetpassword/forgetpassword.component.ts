@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SessionService } from '../service/session.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { SessionService } from '../service/session.service';
 })
 export class ForgetpasswordComponent implements OnInit {
 
-  constructor(private sessionService:SessionService) { }
+  constructor(private sessionService:SessionService,private router:Router) { }
   email = ""
   ngOnInit(): void {
   }
@@ -17,7 +18,10 @@ export class ForgetpasswordComponent implements OnInit {
     this.sessionService.forgetPasswordApi(user).subscribe(resp=>{
         if(resp.status == 200){
           alert("OTP SENT");
-          alert(resp.data)
+          //reset password 
+          //otp email password confirmpassword 
+          this.router.navigateByUrl("/resetpassword")
+
         }else{
           alert("Invalid Email")
         }

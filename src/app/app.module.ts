@@ -10,6 +10,7 @@ import {   HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { HomeComponent } from './customer/home/home.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
     SignupComponent,
     DashboardComponent,
     HomeComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

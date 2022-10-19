@@ -23,4 +23,8 @@ export class SessionService {
   forgetPasswordApi(user:any):Observable<any>{
     return this.httpClient.post("http://localhost:9999/forgetpassword",user)
   }
+
+  resetPasswordApi(user:any):Observable<any>{
+    return this.httpClient.put("http://localhost:9999/resetpassword",user)
+  }
 }
