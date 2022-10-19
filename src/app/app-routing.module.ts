@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { HomeComponent } from './customer/home/home.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
@@ -14,7 +15,12 @@ const routes: Routes = [
   {path:"resetpassword",component:ResetPasswordComponent},
   {path:"",component:LoginComponent},
   {path:"customer/home",component:HomeComponent},
-  {path:"admin/dashboard",component:DashboardComponent}
+
+
+  {path:"admin",component:AdminLayoutComponent,children:[
+    {path:"dashboard",component:DashboardComponent}
+  ]}
+
 ];
 
 @NgModule({

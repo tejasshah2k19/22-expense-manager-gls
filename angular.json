@@ -28,8 +28,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/materialdesignicons.min.css",
-              "src/assets/css/style.css"
+               "src/assets/css/style.css"
             ],
             "scripts": [
               "src/assets/js/jquery.cookie.js",

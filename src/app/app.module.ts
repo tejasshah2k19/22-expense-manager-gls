@@ -11,6 +11,10 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { HomeComponent } from './customer/home/home.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
+import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
+import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
+import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     DashboardComponent,
     HomeComponent,
     ForgetpasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    AdminHeaderComponent,
+    AdminSidebarComponent,
+    AdminFooterComponent,
+    AdminLayoutComponent
   ],
   imports: [
     BrowserModule,
