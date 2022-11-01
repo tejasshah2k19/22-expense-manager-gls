@@ -15,6 +15,9 @@ import { AdminHeaderComponent } from './admin/admin-header/admin-header.componen
 import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
 import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
 import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ListusersComponent } from './admin/listusers/listusers.component';
+import { AddUserComponent } from './admin/add-user/add-user.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.componen
     AdminHeaderComponent,
     AdminSidebarComponent,
     AdminFooterComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    LogoutComponent,
+    ListusersComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
