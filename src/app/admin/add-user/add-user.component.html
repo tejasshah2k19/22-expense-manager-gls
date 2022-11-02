@@ -19,8 +19,12 @@
                 Email : <input type="text" [(ngModel)]="email"> {{emailError}}<br><Br>
                 Password : <input type="password" [(ngModel)]="password" >{{passwordError}}<br><Br>
                 
-                
-            <br><br>
+                Role : <select [(ngModel)]="role">
+                        <option>Select Role</option>
+                        <option *ngFor="let r of roles"  value="{{r._id}}">{{r.roleName}}</option>
+                      </select>
+                      <button (click)="saveUser()">Add User</button>
+                      <br><br>
             <a routerLink="/admin/listusers">List User</a>  
           </div>
         </div>

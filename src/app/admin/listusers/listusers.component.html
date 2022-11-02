@@ -13,33 +13,40 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title float-left">List User</h4>
-          
-          <table class="table table-bordered">
-            <tr>
-              <td>123</td>
-              <td>456</td>
-            </tr>
- 
-            <tr>
-              <td>123</td>
-              <td>456</td>
-            </tr>
- 
-            <tr>
-              <td>123</td>
-              <td>456</td>
-            </tr>
- 
+
+          <table id="listuser">
+            <thead>
+              <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Role</th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let u of users">
+                <td>{{u.firstName}}</td>
+                <td>{{u.lastName}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.role.roleName}}</td>
+              </tr>
+            </tbody>
 
           </table>
           <br><br>
-          <a routerLink="/admin/adduser">AddUser</a>  
+          <a routerLink="/admin/adduser">AddUser</a>
         </div>
       </div>
     </div>
 
   </div>
   <br><br><BR><br><br>
-    <br><br><BR><br><br>
-      <br><br><BR><br><br>
+  <br><br><BR><br><br>
+  <br><br><BR><br><br>
 </div>
+
+<script>
+   $('#listuser').DataTable();
+</script>
