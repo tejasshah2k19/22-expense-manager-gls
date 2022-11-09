@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-
+  //admin 
   constructor(private httpClient:HttpClient) { }
 
 
@@ -17,4 +17,9 @@ export class UserService {
   getAllRolesApi():Observable<any>{
     return this.httpClient.get("http://localhost:9999/role");
   }
+  
+  deleteUserApi(userId:any):Observable<any>{
+    return this.httpClient.delete("http://localhost:9999/deleteuser/"+userId)
+  }
+
 }

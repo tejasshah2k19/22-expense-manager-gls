@@ -8,6 +8,8 @@ import { UserService } from '../service/user.service';
 })
 export class ListusersComponent implements OnInit {
 
+
+
   constructor(private userService: UserService) { }
   users: Array<any> = []
   ngOnInit(): void {
@@ -15,8 +17,15 @@ export class ListusersComponent implements OnInit {
     this.userService.getAllUsersApi().subscribe(resp => {
       this.users = resp.data;
       console.log(this.users);
-      
-    })
+      })
   }
 
+  deleteUser(userId:any){
+    alert("delete call..."+userId)
+    this.userService.deleteUserApi(userId).subscribe(resp=>{
+        console.log(resp);
+        
+    })
+
+  }
 }

@@ -28,16 +28,16 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/jquery.dataTables.min.css",
-               "src/assets/css/style.css"
+               "src/assets/css/style.css",
+              "node_modules/datatables.net-dt/css/jquery.dataTables.min.css"
             ],
             "scripts": [
-              
               "src/assets/js/jquery.cookie.js",
               "src/assets/js/off-canvas.js",
               "src/assets/js/hoverable-collapse.js",
-             
-              "src/assets/js/todolist.js"
+              "src/assets/js/todolist.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/datatables.net/js/jquery.dataTables.min.js"
             ]
           },
           "configurations": {

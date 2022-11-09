@@ -91,3 +91,24 @@ call any api from service we will create a function
 2) if you have to pass some data to api / node server that you have argument function 
 
 
+how to use datatables? 
+1) ng add angular-datatables
+ng add angular-datatables@9.0.0 
+
+2) app.module.ts 
+   imports -> 
+    DataTablesModule,
+
+3) html => 
+      inside table tab we have to add below line 
+      *ngIf="users.length > 0 " datatable="ng"
+
+      <table>
+         <thead>
+         </thead>
+         <tbody>
+         </tbody>
+      </table>
+
+-----------------------------------------------------------------------------      
+

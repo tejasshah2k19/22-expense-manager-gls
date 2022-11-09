@@ -18,6 +18,7 @@ import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.componen
 import { LogoutComponent } from './logout/logout.component';
 import { ListusersComponent } from './admin/listusers/listusers.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -39,10 +40,11 @@ import { AddUserComponent } from './admin/add-user/add-user.component';
   ],
   imports: [
     BrowserModule,
+    DataTablesModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+     
   ],
   providers: [],
   bootstrap: [AppComponent]
