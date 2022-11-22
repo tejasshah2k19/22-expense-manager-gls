@@ -28,8 +28,9 @@
             ],
             "styles": [
               "src/styles.css",
-               "src/assets/css/style.css",
-              "node_modules/datatables.net-dt/css/jquery.dataTables.min.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "src/assets/css/style.css",
+              "node_modules/datatables.net-dt/css/jquery.dataTables.min.css"              
             ],
             "scripts": [
               "src/assets/js/jquery.cookie.js",

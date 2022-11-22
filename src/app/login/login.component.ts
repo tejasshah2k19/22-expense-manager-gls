@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SessionService } from '../service/session.service';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ export class LoginComponent implements OnInit {
   email = ""
   password = ""
 
-  constructor(private sessionService: SessionService,private router:Router) { }
+  constructor(private sessionService: SessionService,private router:Router,private ts:ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -28,8 +30,8 @@ export class LoginComponent implements OnInit {
           this.router.navigateByUrl("/customer/home")
         }else if(resp.data.role.roleName == "admin"){
           this.router.navigateByUrl("/admin/dashboard")
-        }
-        alert("valid credentials")
+        } 
+        this.ts.success("Login successfuly","Success",{timeOut:3000});       
       }
     })
   }

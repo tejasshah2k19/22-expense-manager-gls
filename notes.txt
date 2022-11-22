@@ -111,4 +111,16 @@ ng add angular-datatables@9.0.0
       </table>
 
 -----------------------------------------------------------------------------      
+Notification:- 
 
+ npm install ngx-toastr@10.2.0 --force 
+
+
+ add css mapping in angular.jso 
+
+ app.module.ts -> BrowserAnimationModuel, ToastrModule mapping 
+ 
+use -> private ts:ToastrService 
+
+   ts.succes()
+   ts.error()

@@ -19,6 +19,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { ListusersComponent } from './admin/listusers/listusers.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { DataTablesModule } from 'angular-datatables';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { DataTablesModule } from 'angular-datatables';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
      
   ],
   providers: [],
