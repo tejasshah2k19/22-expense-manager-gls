@@ -112,5 +112,7 @@
       }
     }
   },
-  "defaultProject": "expense-manager"
+  "cli": {
+    "analytics": false
+  }
 }
