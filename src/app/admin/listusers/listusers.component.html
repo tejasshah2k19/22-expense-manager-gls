@@ -32,7 +32,10 @@
                 <td>{{u.lastName}}</td>
                 <td>{{u.email}}</td>
                 <td>{{u.role.roleName}}</td>
-                <td> <i class="mdi mdi-delete-forever-outline text-danger mypointer" title="Delete" (click)="deleteUser(u._id)"   ></i></td>
+                <td> <i class="mdi mdi-delete-forever-outline text-danger mypointer" title="Delete" (click)="deleteUser(u._id)"   ></i> |
+                
+                  <a routerLink="/admin/edituser/{{u._id}}"><i class="mdi mdi-fountain-pen text-success mypointer" ></i></a>
+                </td>
               </tr>
             </tbody>
 
