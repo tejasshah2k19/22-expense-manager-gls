@@ -43,7 +43,12 @@ export class AddUserComponent implements OnInit {
     if (this.firstName == "" || this.firstName.trim().length == 0) {
       this.firstNameError = "Please Enter FirstName"
       isError = true
-    } else {
+    } 
+    else if( /^[a-zA-Z]+$/.test(this.firstName) == false){
+      this.firstNameError = "Please Enter Valid Name"
+      isError = true
+    }
+    else {
       this.firstNameError = ""
     }
 

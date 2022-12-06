@@ -21,6 +21,8 @@ import { AddUserComponent } from './admin/add-user/add-user.component';
 import { ToastrModule } from 'ngx-toastr';
 import { DataTablesModule } from 'angular-datatables';
 import { EditUserComponent } from './admin/edit-user/edit-user.component';
+import { ListExpenseComponent } from './admin/list-expense/list-expense.component';
+import { AddExpenseComponent } from './admin/add-expense/add-expense.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { EditUserComponent } from './admin/edit-user/edit-user.component';
     LogoutComponent,
     ListusersComponent,
     AddUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    ListExpenseComponent,
+    AddExpenseComponent
   ],
   imports: [
     BrowserModule,

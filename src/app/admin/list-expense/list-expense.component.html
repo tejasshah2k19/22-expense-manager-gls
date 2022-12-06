@@ -1,0 +1,59 @@
+<div class="content-wrapper">
+    <div class="page-header">
+      <h3 class="page-title">
+        <span class="page-title-icon bg-gradient-primary text-white me-2">
+          <i class="mdi mdi-account-multiple"></i>
+        </span> Manage Expenses
+      </h3>
+  
+    </div>
+  
+    <div class="row">
+      <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title float-left">List Expenses</h4>
+  
+            <table   *ngIf="expenses.length > 0 " datatable="ng" id="listuser">
+              <thead>
+                <tr>
+                  <th>Payee</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                 <th>Action</th>
+                </tr>
+              </thead>
+  
+              <tbody>
+                <tr *ngFor="let u of expenses">
+                  <td>{{u.payee}}</td>
+                  <td>{{u.amount}}</td>
+                  <td>{{u.date}}</td>
+
+                  <td>{{u.description}}</td>
+                  
+                  <td>{{u.status}}</td>
+                  
+                  <td> <i class="mdi mdi-delete-forever-outline text-danger mypointer" title="Delete"     ></i> |
+                  
+                    <a routerLink="/admin/edituser/{{u._id}}"><i class="mdi mdi-fountain-pen text-success mypointer" ></i></a>
+                  </td>
+                </tr>
+              </tbody>
+  
+            </table>
+            <br><br>
+            <a routerLink="/admin/addexpense">AddExpense</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <br><br><BR><br><br>
+    <br><br><BR><br><br>
+    <br><br><BR><br><br>
+  </div>
+   
+  

@@ -9,21 +9,22 @@
     </div>
   
     <div class="row">
-      <div class="col-md-12 grid-margin stretch-card">
+      <div class="col-md-6 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
             <h4 class="card-title float-left">Add New User</h4>
             
-            FirstName : <input type="text" [(ngModel)]="firstName" > {{firstNameError}}  <br><Br>
-                LastName : <input type="text" [(ngModel)]="lastName" > {{lastNameError}}  <br><Br>
-                Email : <input type="text" [(ngModel)]="email"> {{emailError}}<br><Br>
-                Password : <input type="password" [(ngModel)]="password" >{{passwordError}}<br><Br>
+            FirstName : <input type="text" class="form-control" [(ngModel)]="firstName" > {{firstNameError}}  <br><Br>
+                LastName : <input type="text"  class="form-control" [(ngModel)]="lastName" > {{lastNameError}}  <br><Br>
+                Email : <input type="text"  class="form-control" [(ngModel)]="email"> {{emailError}}<br><Br>
+                Password : <input type="password"   class="form-control" [(ngModel)]="password" >{{passwordError}}<br><Br>
                 
-                Role : <select [(ngModel)]="role">
+                Role : <select [(ngModel)]="role"  class="form-control">
                         <option>Select Role</option>
                         <option *ngFor="let r of roles"  value="{{r._id}}">{{r.roleName}}</option>
                       </select>
-                      <button (click)="saveUser()">Add User</button>
+                      <Br><Br>
+                      <button class="btn btn-secondary" (click)="saveUser()">Add User</button>
                       <br><br>
             <a routerLink="/admin/listusers">List User</a>  
           </div>
