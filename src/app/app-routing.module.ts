@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddExpenseComponent } from './admin/add-expense/add-expense.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
+import { AddCategoryComponent } from './admin/category/add-category/add-category.component';
+import { ListCategoryComponent } from './admin/category/list-category/list-category.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { EditUserComponent } from './admin/edit-user/edit-user.component';
 import { ListExpenseComponent } from './admin/list-expense/list-expense.component';
@@ -31,7 +33,9 @@ const routes: Routes = [
       { path:"adduser",component:AddUserComponent},
       {path:"edituser/:userId",component:EditUserComponent},
       {path:"listexpenses",component:ListExpenseComponent},
-      {path:"addexpense",component:AddExpenseComponent}
+      {path:"addexpense",component:AddExpenseComponent},
+      {path:"addcategory",component:AddCategoryComponent},
+      {path:"categories",component:ListCategoryComponent}
     ]
   }
 

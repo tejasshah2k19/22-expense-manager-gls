@@ -124,3 +124,22 @@ use -> private ts:ToastrService
 
    ts.succes()
    ts.error()
+
+-------------------------
+chartjs
+
+npm install chartjs 
+
+  this.chart = new Chart("chart", {
+        type:'bar',
+        data: {
+          labels: ["Jan", "Feb","March","April","May","June","July","Aug","Sep","Oct","Nov","Dec"],
+          datasets: [
+            {
+              label: "Expense",
+              data: this.exp,
+              backgroundColor: "#198ae3"
+            }
+          ]
+        }
+      })
