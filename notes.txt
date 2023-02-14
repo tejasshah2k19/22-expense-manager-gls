@@ -143,3 +143,42 @@ npm install chartjs
           ]
         }
       })
+-------------------------------------------
+nnpm i datatables.net-buttons
+npm i pdfmake
+
+js
+
+    "node_modules/datatables.net-buttons/js/dataTables.buttons.min.js",
+              "node_modules/datatables.net-buttons/js/buttons.colVis.js",
+              "node_modules/datatables.net-buttons/js/buttons.flash.js",
+              "node_modules/datatables.net-buttons/js/buttons.html5.js",
+              "node_modules/datatables.net-buttons/js/buttons.print.js",
+              "node_modules/pdfmake/build/pdfmake.min.js",
+              "node_modules/pdfmake/build/vfs_fonts.js"
+
+
+
+css
+   "node_modules/datatables.net-buttons-dt/css/buttons.dataTables.min.css"
+        
+
+
+ts file 
+
+dtOption:any={}
+
+this.dtOptions = {
+
+        search: {
+          return: true,
+        },
+        dom: 'Bfrtip',
+        buttons: [
+          'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+        export:true
+      }
+
+html 
+ <table   *ngIf="expenses.length > 0 " datatable="ng" [dtOptions]="dtOptions" id="listuser">

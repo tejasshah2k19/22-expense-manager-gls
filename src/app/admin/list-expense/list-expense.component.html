@@ -14,7 +14,7 @@
           <div class="card-body">
             <h4 class="card-title float-left">List Expenses</h4>
   
-            <table   *ngIf="expenses.length > 0 " datatable="ng" id="listuser">
+            <table   *ngIf="expenses.length > 0 " datatable="ng" [dtOptions]="dtOptions" id="listuser">
               <thead>
                 <tr>
                   <th>Payee</th>

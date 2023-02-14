@@ -9,9 +9,23 @@ import { ExpenseService } from '../service/expense.service';
 export class ListExpenseComponent {
 
   expenses: Array<any> = []
+  dtOptions: any = {
+
+  }
   constructor(private expService: ExpenseService) {
     this.expService.getAllExpApi().subscribe(resp => {
       this.expenses = resp.data;
+      this.dtOptions = {
+
+        search: {
+          return: true,
+        },
+        dom: 'Bfrtip',
+        buttons: [
+          'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+        export:true
+      }
     })
   }
 }
